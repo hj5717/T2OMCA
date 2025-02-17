@@ -32,7 +32,7 @@ class MultiAgvOffloadingEnv:
         for job, num_users in self.num_users_per_job.items():
             for _ in range(num_users):
                 if job == 'agv_num':
-                    mec_index = np.random.randint(0, self.NUM_MEC)  # 为每个AGV分配一个对应的MEC
+                    mec_index = np.random.randint(0, self.NUM_MEC) 
                     mec = self.mecs[mec_index]
                     agv_x, agv_y = generate_random_position_within_circle(mec.mec_x, mec.mec_y,
                                                                           mec.communication_range)
